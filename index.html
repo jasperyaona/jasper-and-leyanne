@@ -28,12 +28,15 @@
         <div class="wide px-5 md:px-10 min-h-[72px] flex items-center justify-between gap-4"><a href="#home"
                 class="serif text-[22px] tracking-tight whitespace-nowrap"
                 aria-label="Jasper and Leyanne, back to home">J <span class="text-[#baa47c]">&amp;</span> L</a>
-            <nav aria-label="Main navigation" class="hidden md:flex items-center gap-7 lg:gap-10"><a data-nav=""
-                    href="#home" class="nav-link eyebrow">Home</a> <a data-nav="" href="#story"
-                    class="nav-link eyebrow">Our Story</a> <a data-nav="" href="#wedding" class="nav-link eyebrow">The
-                    Wedding</a> <a data-nav="" href="#gallery" class="nav-link eyebrow">Gallery</a> <a data-nav=""
-                    href="#gifts" class="nav-link eyebrow">Gifts</a> <a data-nav="" href="#rsvp"
-                    class="nav-link eyebrow">RSVP</a>
+            <nav aria-label="Main navigation" class="hidden md:flex items-center gap-7 lg:gap-10">
+                <a data-nav="" href="#home" class="nav-link eyebrow">Home</a>
+                <a data-nav="" href="#story" class="nav-link eyebrow">Our Story</a>
+                <a data-nav="" href="#wedding" class="nav-link eyebrow">The Wedding</a>
+                <a data-nav href="#guest-info" class="nav-link eyebrow">Guest Info</a>
+                <a data-nav="" href="#gallery" class="nav-link eyebrow">Gallery</a>
+                <a data-nav="" href="#rsvp" class="nav-link eyebrow">RSVP</a>
+                <a data-nav="" href="#gifts" class="nav-link eyebrow">Gifts</a>
+
             </nav><button id="menu-toggle" type="button"
                 class="md:hidden min-w-11 min-h-11 flex items-center justify-center border border-[#baa47c]/60"
                 aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu"><span
@@ -41,10 +44,14 @@
         </div>
         <nav id="mobile-menu" aria-label="Mobile navigation"
             class="hidden md:hidden px-6 pb-6 pt-2 border-t border-[#baa47c]/30">
-            <div class="flex flex-col gap-1"><a href="#home" class="py-3 eyebrow">Home</a><a href="#story"
-                    class="py-3 eyebrow">Our Story</a><a href="#wedding" class="py-3 eyebrow">The Wedding</a><a
-                    href="#gallery" class="py-3 eyebrow">Gallery</a><a href="#gifts" class="py-3 eyebrow">Gifts</a><a
-                    href="#rsvp" class="py-3 eyebrow">RSVP</a>
+            <div class="flex flex-col gap-1"><a href="#home" class="py-3 eyebrow">Home</a>
+                <a href="#story" class="py-3 eyebrow">Our Story</a>
+                <a href="#wedding" class="py-3 eyebrow">The Wedding</a>
+                <a href="#guest-info" class="py-3 eyebrow">Guest Info</a>
+                <a href="#gallery" class="py-3 eyebrow">Gallery</a>
+
+                <a href="#rsvp" class="py-3 eyebrow">RSVP</a>
+                <a href="#gifts" class="py-3 eyebrow">Gifts</a>
             </div>
         </nav>
     </header>
@@ -272,11 +279,221 @@
                             class="absolute -left-[43px] sm:-left-[63px] top-2 h-3 w-3 rounded-full border border-[#baa47c] bg-[#f8f6f0]"></span>
                         <p data-template-id="schedule-future" class="canva-text italic text-[#52675b]"
                             style="color: rgb(82, 103, 91); font-weight: 400; font-style: normal; font-size: 16px;">
-                           A Day to Remember</p>
+                            A Day to Remember</p>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- GUEST INFORMATION -->
+        <section id="guest-info" class="canva-section section-pad" style="background: rgb(248, 246, 240);">
+
+            <div class="wide max-w-5xl mx-auto">
+
+                <div class="text-center reveal mb-14">
+                    <p class="canva-text eyebrow mb-5" style="color: rgb(128, 149, 133);">
+                        A LITTLE NOTE FOR OUR GUESTS
+                    </p>
+
+                    <h2 class="canva-text text-[clamp(2.8rem,6vw,5rem)]"
+                        style="color: rgb(25, 56, 45); font-weight: 400;">
+                        Before You Join Us
+                    </h2>
+
+                    <div class="gold-rule mx-auto mt-7 mb-7"></div>
+
+                    <p class="canva-text leading-relaxed max-w-2xl mx-auto" style="color: rgb(82, 103, 91);">
+                        We're so excited to celebrate this special day with you.
+                        Here are a few helpful details to make your visit
+                        comfortable and memorable.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+
+                    <!-- DRESS CODE -->
+                    <article class="canva-card p-8 sm:p-10 reveal" style="background: rgb(237, 240, 233);">
+
+                        <div class="mb-5" style="color: rgb(186, 164, 124);">
+                            <i data-lucide="shirt" class="w-8 h-8"></i>
+                        </div>
+
+                        <p class="canva-text eyebrow mb-4" style="color: rgb(128, 149, 133);">
+                            WHAT TO WEAR
+                        </p>
+
+                        <h3 class="canva-text text-2xl mb-5" style="color: rgb(25, 56, 45); font-weight: 400;">
+                            Garden Formal
+                        </h3>
+
+                        <p class="canva-text leading-relaxed mb-5" style="color: rgb(82, 103, 91);">
+                            Think elegant, comfortable, and timeless.
+                            We invite you to wear formal or semi-formal attire
+                            suitable for a special wedding celebration.
+                        </p>
+
+                        <p class="canva-text eyebrow mb-3" style="color: rgb(25, 56, 45);">
+                            OUR WEDDING PALETTE
+                        </p>
+
+                        <div class="flex flex-wrap gap-3 mb-5">
+                            <span class="flex items-center gap-2 text-sm" style="color: rgb(82, 103, 91);">
+                                <span class="w-5 h-5 rounded-full border" style="background:#19382d;"></span>
+                                Forest Green
+                            </span>
+
+                            <span class="flex items-center gap-2 text-sm" style="color: rgb(82, 103, 91);">
+                                <span class="w-5 h-5 rounded-full border" style="background:#809585;"></span>
+                                Sage
+                            </span>
+
+                            <span class="flex items-center gap-2 text-sm" style="color: rgb(82, 103, 91);">
+                                <span class="w-5 h-5 rounded-full border" style="background:#d9c8a5;"></span>
+                                Champagne
+                            </span>
+
+                            <span class="flex items-center gap-2 text-sm" style="color: rgb(82, 103, 91);">
+                                <span class="w-5 h-5 rounded-full border" style="background:#f8f6f0;"></span>
+                                Ivory
+                            </span>
+                        </div>
+
+                        <p class="canva-text text-sm leading-relaxed" style="color: rgb(82, 103, 91);">
+                            Our palette is here for inspiration, not a requirement.
+                            Please choose something comfortable and respectful
+                            for the occasion.
+                        </p>
+                    </article>
+
+                    <!-- ARRIVAL -->
+                    <article class="canva-card p-8 sm:p-10 reveal" style="background: rgb(255, 255, 255);">
+
+                        <div class="mb-5" style="color: rgb(186, 164, 124);">
+                            <i data-lucide="clock" class="w-8 h-8"></i>
+                        </div>
+
+                        <p class="canva-text eyebrow mb-4" style="color: rgb(128, 149, 133);">
+                            TIMING IS EVERYTHING
+                        </p>
+
+                        <h3 class="canva-text text-2xl mb-5" style="color: rgb(25, 56, 45); font-weight: 400;">
+                            Plan Your Arrival
+                        </h3>
+
+                        <p class="canva-text leading-relaxed mb-6" style="color: rgb(82, 103, 91);">
+                            We encourage everyone to arrive early so there's
+                            enough time to settle in before the day's events.
+                        </p>
+
+                        <div class="border-l-2 pl-5 mb-6" style="border-color:#baa47c;">
+                            <p class="canva-text eyebrow mb-2" style="color: rgb(128, 149, 133);">
+                                11:00 AM
+                            </p>
+
+                            <p class="canva-text text-lg" style="color: rgb(25, 56, 45);">
+                                Wedding Ceremony
+                            </p>
+                        </div>
+
+                        <div class="border-l-2 pl-5" style="border-color:#baa47c;">
+                            <p class="canva-text eyebrow mb-2" style="color: rgb(128, 149, 133);">
+                                4:00 PM
+                            </p>
+
+                            <p class="canva-text text-lg" style="color: rgb(25, 56, 45);">
+                                Wedding Reception
+                            </p>
+                        </div>
+
+                    </article>
+
+                    <!-- KIND REMINDERS -->
+                    <article class="canva-card p-8 sm:p-10 reveal" style="background: rgb(255, 255, 255);">
+
+                        <div class="mb-5" style="color: rgb(186, 164, 124);">
+                            <i data-lucide="heart" class="w-8 h-8"></i>
+                        </div>
+
+                        <p class="canva-text eyebrow mb-4" style="color: rgb(128, 149, 133);">
+                            A FEW KIND REMINDERS
+                        </p>
+
+                        <h3 class="canva-text text-2xl mb-5" style="color: rgb(25, 56, 45); font-weight: 400;">
+                            Little Things That Matter
+                        </h3>
+
+                        <ul class="space-y-4 leading-relaxed" style="color: rgb(82, 103, 91);">
+
+                            <li class="flex gap-3">
+                                <span style="color:#baa47c;">♥</span>
+                                <span>Please confirm your attendance by
+                                    November 27, 2026.</span>
+                            </li>
+
+                            <li class="flex gap-3">
+                                <span style="color:#baa47c;">♥</span>
+                                <span>Please keep your RSVP details accurate
+                                    so we can prepare for you.</span>
+                            </li>
+
+                            <li class="flex gap-3">
+                                <span style="color:#baa47c;">♥</span>
+                                <span>Kindly check this website for updates
+                                    to the reception venue and other details.</span>
+                            </li>
+
+                            <li class="flex gap-3">
+                                <span style="color:#baa47c;">♥</span>
+                                <span>Most of all, come ready to celebrate
+                                    with us and make beautiful memories!</span>
+                            </li>
+
+                        </ul>
+                    </article>
+
+                    <!-- LOCATION -->
+                    <article class="canva-card p-8 sm:p-10 reveal" style="background: rgb(237, 240, 233);">
+
+                        <div class="mb-5" style="color: rgb(186, 164, 124);">
+                            <i data-lucide="map-pin" class="w-8 h-8"></i>
+                        </div>
+
+                        <p class="canva-text eyebrow mb-4" style="color: rgb(128, 149, 133);">
+                            FIND YOUR WAY
+                        </p>
+
+                        <h3 class="canva-text text-2xl mb-5" style="color: rgb(25, 56, 45); font-weight: 400;">
+                            Getting There
+                        </h3>
+
+                        <p class="canva-text leading-relaxed mb-5" style="color: rgb(82, 103, 91);">
+                            Please refer to the Wedding section above for the
+                            ceremony location and map. Reception details will
+                            be updated once the venue is confirmed.
+                        </p>
+
+                        <a href="#wedding"
+                            class="canva-button outlined min-h-[48px] px-6 eyebrow inline-flex items-center justify-center"
+                            style="text-decoration:none;">
+                            VIEW WEDDING DETAILS
+                        </a>
+
+                    </article>
+
+                </div>
+
+                <div class="text-center mt-14 reveal">
+                    <p class="canva-text serif italic text-xl leading-relaxed" style="color: rgb(25, 56, 45);">
+                        Thank you for being part of our forever.
+                    </p>
+
+                    <p class="canva-text eyebrow mt-4" style="color: rgb(128, 149, 133);">
+                        WITH LOVE, JASPER &amp; LEYANNE
+                    </p>
+                </div>
+
+            </div>
+        </section>
+        <!-- END GUEST INFORMATION -->
         <section id="gallery" data-template-id="gallery-section" class="canva-section section-pad"
             style="background: rgb(255, 255, 255);">
             <div class="wide">
@@ -505,7 +722,7 @@
                     });
                 });
             }, { rootMargin: '-25% 0px -60% 0px' });
-            ['home', 'story', 'wedding', 'gallery', 'rsvp'].forEach(id => navObserver.observe(document.getElementById(id)));
+            ['home', 'story', 'wedding', 'guest-info', 'gallery', 'gifts', 'rsvp'].forEach(id => navObserver.observe(document.getElementById(id)));
         } else document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
 
         const [year, month, day] = WEDDING_TARGET_DATE.split('-').map(Number);
@@ -574,6 +791,9 @@
             if (event.key === 'Escape') closeLightbox();
             if (event.key === 'Tab') { event.preventDefault(); closeButton.focus(); }
         });
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
     </script>
 
 </body>
