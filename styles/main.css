@@ -1,0 +1,372 @@
+:root {
+    --forest: #19382d;
+    --ivory: #f8f6f0;
+    --sage: #809585;
+    --gold: #baa47c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    color: var(--forest);
+    background: var(--ivory);
+    font-family: "DM Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+.serif {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+    outline: 2px solid #c9ab70;
+    outline-offset: 5px;
+}
+
+.eyebrow {
+    font-family: "DM Sans", sans-serif;
+    font-size: .68rem;
+    letter-spacing: .26em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.wide {
+    max-width: 1320px;
+    margin-inline: auto;
+}
+
+.section-pad {
+    padding: clamp(85px, 11vw, 160px) clamp(22px, 6vw, 96px);
+}
+
+.hero {
+    min-height: calc(100 * min(var(--vh, 1vh), 1vh));
+    min-height: max(680px, calc(100 * min(var(--vh, 1vh), 1vh)));
+}
+
+.hero-shade {
+    background: linear-gradient(180deg, rgba(10, 30, 22, .31), rgba(10, 30, 22, .21) 46%, rgba(10, 30, 22, .56));
+}
+
+.nav-shell {
+    background: rgba(248, 246, 240, .96);
+    backdrop-filter: blur(16px);
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background: var(--gold);
+    bottom: -7px;
+    left: 0;
+    right: 100%;
+    transition: right .3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    right: 0;
+}
+
+.photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gold-rule {
+    height: 1px;
+    width: 48px;
+    background: var(--gold);
+}
+
+.outlined {
+    border: 1px solid var(--gold);
+    transition: background .25s, color .25s, transform .25s;
+}
+
+.outlined:hover {
+    transform: translateY(-2px);
+    background: var(--gold);
+    color: var(--forest);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity .85s ease, transform .85s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: none;
+}
+
+.scroll-line {
+    animation: scrollline 2.2s infinite;
+}
+
+@keyframes scrollline {
+    0% {
+        transform: scaleY(.25);
+        transform-origin: top;
+        opacity: .5;
+    }
+
+    60% {
+        transform: scaleY(1);
+        transform-origin: top;
+        opacity: 1;
+    }
+
+    100% {
+        transform: scaleY(.25);
+        transform-origin: bottom;
+        opacity: .5;
+    }
+}
+
+.story-primary {
+    height: clamp(390px, 52vw, 690px);
+}
+
+.story-secondary {
+    height: clamp(200px, 24vw, 330px);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: clamp(12px, 2vw, 28px);
+}
+
+.gallery-item {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    background: #d7ddd2;
+}
+
+.gallery-item img {
+    transition: transform .7s ease;
+}
+
+.gallery-item:hover img,
+.gallery-item:focus-visible img {
+    transform: scale(1.045);
+}
+
+.gallery-item:nth-child(1) {
+    grid-column: span 7;
+    height: 520px;
+}
+
+.gallery-item:nth-child(2) {
+    grid-column: span 5;
+    height: 520px;
+}
+
+.gallery-item:nth-child(3) {
+    grid-column: span 4;
+    height: 380px;
+}
+
+.gallery-item:nth-child(4) {
+    grid-column: span 8;
+    height: 380px;
+}
+
+.gallery-item:nth-child(5) {
+    grid-column: span 6;
+    height: 440px;
+}
+
+.gallery-item:nth-child(6) {
+    grid-column: span 6;
+    height: 440px;
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    inset-inline: 0;
+    padding: 36px 18px 16px;
+    background: linear-gradient(transparent, rgba(10, 25, 18, .65));
+    color: white;
+    text-align: left;
+}
+
+.leaf {
+    position: absolute;
+    width: 170px;
+    height: 250px;
+    border: 1px solid rgba(186, 164, 124, .35);
+    border-radius: 90% 4% 85% 5%;
+    transform: rotate(-35deg);
+    pointer-events: none;
+}
+
+.leaf::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 160px;
+    border: 1px solid rgba(186, 164, 124, .3);
+    border-radius: 90% 4% 85% 5%;
+    left: 72px;
+    top: 70px;
+    transform: rotate(38deg);
+}
+
+#lightbox:not([hidden]) {
+    display: flex;
+}
+
+#lightbox[hidden] {
+    display: none;
+}
+
+
+/* Wedding gift QR design */
+.wedding-qr-card {
+    max-width: 340px;
+    margin: 2rem auto 0;
+    padding: 2rem 1.25rem;
+    text-align: center;
+    background: #fffefa;
+    border: 1px solid #baa47c;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgb(38 62 50 / 8%);
+}
+
+.wedding-qr-frame {
+    display: inline-block;
+    padding: 10px;
+    background: #ffffff;
+    border: 1px solid #e4d7b9;
+    border-radius: 10px;
+}
+
+.wedding-qr-image {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    filter: none;
+}
+
+.wedding-qr-caption {
+    margin: 1.25rem 0;
+    color: #52675b;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+}
+
+.wedding-qr-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #baa47c;
+}
+
+.wedding-qr-divider::before,
+.wedding-qr-divider::after {
+    content: "";
+    width: 55px;
+    height: 1px;
+    background: #baa47c;
+}
+
+.wedding-qr-message {
+    max-width: 260px;
+    margin: 1rem auto 0;
+    color: #52675b;
+    font-family: Georgia, serif;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+
+
+@media(max-width:767px) {
+    .gallery-item:nth-child(n) {
+        grid-column: span 6;
+        height: 260px;
+    }
+
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(4) {
+        grid-column: span 12;
+        height: 360px;
+    }
+
+    .gallery-caption {
+        font-size: .65rem;
+    }
+}
+
+@media(max-width:480px) {
+    .gallery-item:nth-child(n) {
+        height: 220px;
+    }
+
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(4) {
+        height: 310px;
+    }
+
+    .wedding-qr-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .wedding-qr-image {
+        width: 200px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
