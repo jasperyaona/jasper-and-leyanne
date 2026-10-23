@@ -97,6 +97,10 @@ a {
     height: 100%;
     object-fit: cover;
 }
+.top-center{
+    
+    object-position: top center;
+}
 
 .gold-rule {
     height: 1px;
