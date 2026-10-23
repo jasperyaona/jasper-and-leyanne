@@ -532,7 +532,7 @@
                             data-template-id="gallery-caption-six" class="canva-tag gallery-caption eyebrow"
                             style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;"></span></button>
                 </div>
-                <div class="text-center mt-14 reveal">
+                <!-- <div class="text-center mt-14 reveal">
                     <p class="canva-text serif italic text-xl leading-relaxed" style="color: rgb(25, 56, 45);">
                         Thank you for being part of our forever.
                     </p>
@@ -540,7 +540,7 @@
                     <p class="canva-text eyebrow mt-4" style="color: rgb(128, 149, 133);">
                         WITH LOVE, JASPER &amp; LEYANNE
                     </p>
-                </div>
+                </div> -->
             </div>
         </section>
         <section id="rsvp" data-template-id="rsvp-section"
@@ -585,12 +585,13 @@
                     style="color: rgb(25, 56, 45); font-weight: 400;">Your Presence Is Our Present!</h2>
                 <div class="gold-rule mx-auto mb-8"></div>
                 <p class="canva-text serif text-[clamp(1.15rem,2vw,1.45rem)] leading-relaxed mb-6"
-                    style="color: rgb(25, 56, 45);">For those who wish to bless us, physical gifts and monetary gifts
-                    are warmly appreciated, with no obligation.</p>
+                    style="color: rgb(25, 56, 45);">Having you celebrate with us is already a blessing. For those who
+                    wish to bless us further, physical and monetary gifts are warmly appreciated, though your presence
+                    is more than enough.
+                </p>
                 <p class="canva-text leading-relaxed mb-6" style="color: rgb(82, 103, 91);">A gift table will be
-                    available at the reception for presents, envelopes, and letters where you can leave your heartfelt
-                    wishes for us. For
-                    those who wish to bless us through online banking, we have provided a QR code for your convenience.
+                    available at the reception for presents, envelopes, and heartfelt letters. For those who prefer to
+                    send their blessings through online banking, a QR code is provided below for your convenience. ♡
                 </p>
                 <!-- <p class="canva-text serif italic text-[1.2rem] leading-relaxed mb-7" style="color: rgb(25, 56, 45);">
                     Please know that there is absolutely no obligation. Having you with us as we begin our forever is
@@ -639,7 +640,7 @@
             <div class="relative z-10 max-w-4xl reveal">
                 <p data-template-id="final-promise" class="canva-text serif italic text-[clamp(1.4rem,3vw,2.3rem)] mb-8"
                     style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">One day.
-                    One promise. A lifetime of love.</p>
+                    One Promise. An Eternity of Love.</p>
                 <div class="gold-rule mx-auto bg-[#e0cfaa] mb-8"></div>
                 <h2 data-template-id="final-names"
                     class="canva-text text-[clamp(3.5rem,8vw,7rem)] tracking-tight leading-tight"
@@ -820,10 +821,15 @@
                     <span class="env-letter">
                         <small>You are cordially invited</small>
                         <span class="env-rule"></span>
-                        <span class="env-text">to celebrate our wedding</span>
+                        <span class="env-text">to celebrate the wedding of</span>
+                        <span class="env-names">Jasper &amp; Leyanne</span>
                     </span>
                     <span class="env-front"></span>
-                    <span class="env-flap"></span>
+                    <span class="env-flap">
+                        <svg viewBox="0 0 100 52" preserveAspectRatio="none" aria-hidden="true">
+                            <polygon points="0,0 100,0 50,52" />
+                        </svg>
+                    </span>
                     <span class="env-seal"><b>J&amp;L</b></span>
                 </button>
 
@@ -1074,7 +1080,6 @@
             background: none;
             padding: 0;
             cursor: pointer;
-            perspective: 900px;
             -webkit-tap-highlight-color: transparent;
         }
 
@@ -1100,7 +1105,8 @@
             display: flex !important;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
+            padding-top: 18px;
             z-index: 1;
             transform: translate3d(0, 0, 0);
             will-change: transform;
@@ -1112,20 +1118,37 @@
             left: 0;
             top: 0;
             width: 100%;
-            height: 55%;
-            background: linear-gradient(180deg, #e2d4ac, #d9c99d);
-            clip-path: polygon(0 0, 100% 0, 50% 100%);
-            transform-origin: top;
-            will-change: transform;
-            backface-visibility: hidden;
+            height: 52%;
+            transform-origin: top center;
             z-index: 3;
         }
 
+        .env-flap svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+        }
+
+        .env-flap polygon {
+            fill: #d3c08f;
+            stroke: #b9a36c;
+            stroke-width: .6;
+            vector-effect: non-scaling-stroke;
+        }
+
         .env-letter small {
-            font-size: 12px;
-            letter-spacing: .25em;
+            font-size: 11px;
+            letter-spacing: .18em;
             text-transform: uppercase;
             color: #9c8758;
+            white-space: nowrap;
+        }
+
+        .env-names {
+            position: static !important;
+            font-size: 22px;
+            margin-top: 8px;
         }
 
         .env-rule {
@@ -1144,7 +1167,7 @@
 
         .env-front {
             inset: 0;
-            background: linear-gradient(135deg, #eadfbf, #e2d4ac);
+            background: linear-gradient(135deg, #f1e8cc, #e8dcb8);
             clip-path: polygon(0 0, 50% 52%, 100% 0, 100% 100%, 0 100%);
             border-radius: 4px;
             z-index: 2;
@@ -1206,32 +1229,68 @@
         }
 
         #envelope.open .env-flap {
-            animation: flapOpen .8s ease forwards;
+            animation:
+                flapOpen .8s ease forwards,
+                flapFade .7s ease 1.9s forwards;
         }
 
-        #envelope.open .env-letter {
-            transform: translate3d(0, -80px, 0);
+        #envelope.open .env-flap polygon {
+            animation: flapInside .8s linear forwards;
+        }
+
+        @keyframes flapFade {
+            to {
+                opacity: 0;
+            }
         }
 
         @keyframes flapOpen {
             0% {
-                transform: rotateX(0deg);
+                transform: perspective(700px) rotateX(0deg);
                 z-index: 3;
             }
 
-            49% {
+            49.9% {
                 z-index: 3;
             }
 
             50% {
-                transform: rotateX(90deg);
+                transform: perspective(700px) rotateX(90deg);
                 z-index: 0;
             }
 
             100% {
-                transform: rotateX(180deg);
+                transform: perspective(700px) rotateX(180deg);
                 z-index: 0;
             }
+        }
+
+        @keyframes flapInside {
+
+            0%,
+            49.9% {
+                fill: #d3c08f;
+            }
+
+            50%,
+            100% {
+                fill: #c2ae7a;
+            }
+        }
+
+        #envelope.open .env-letter {
+            transform: translate3d(0, -125px, 0);
+        }
+
+        /* Envelope fades away once the letter is out */
+        .env-back,
+        .env-front {
+            transition: opacity .7s ease 1.9s;
+        }
+
+        #envelope.open .env-back,
+        #envelope.open .env-front {
+            opacity: 0;
         }
 
         @media (max-height: 640px) {
@@ -1247,6 +1306,10 @@
                 height: 170px;
                 width: 255px;
             }
+        }
+
+        html {
+            scrollbar-gutter: stable;
         }
 
         /* Music button */
